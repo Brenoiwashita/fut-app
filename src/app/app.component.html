@@ -1,7 +1,6 @@
-<header class="app-header">
+<!-- <header class="app-header">
   <h1>Meu PWA</h1>
 
-  <!-- Botão só aparece se o browser disser que pode instalar -->
   <button (click)="instalar()">
     Instalar app
   </button>
@@ -9,4 +8,15 @@
 
 <main class="app-content">
   <router-outlet></router-outlet>
-</main>
+</main> -->
+
+<ng-container *ngIf="user$ | async as user; else loggedOut">
+  <img *ngIf="user.photoUrl" [src]="user.photoUrl" class="avatar" />
+  <h2>{{ user.name }}</h2>
+  <p>{{ user.email }}</p>
+  <button (click)="logout()">Sair</button>
+</ng-container>
+
+<ng-template #loggedOut>
+  <button (click)="login()">Entrar com Google</button>
+</ng-template>
