@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
+import { PwaInstallService } from '../../pwa/pwa-install.service';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,9 @@ export class LoginComponent {
   auth = inject(AuthService);
   router = inject(Router);
 
+  constructor(private pwaInstallService: PwaInstallService) { }
+
+
   login() {
     this.auth.loginWithGoogle$().subscribe(user => {
       sessionStorage.setItem('user', JSON.stringify(user));
@@ -21,5 +25,13 @@ export class LoginComponent {
 
   logout() {
     this.auth.logout();
+  }
+
+  isPwa(): boolean {
+    return window.matchMedia('(display-mode: standalone)').matches;
+  }
+
+  instalar() {
+    this.pwaInstallService.installPwa();
   }
 }
