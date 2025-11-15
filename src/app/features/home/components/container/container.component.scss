@@ -1,0 +1,181 @@
+  /* MAIN */
+  .dash-main {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 85vh;
+    padding: 4px 2px 70px; // espaço pro footer
+  }
+  
+  /* Cards genéricos */
+  .card {
+    background: #071d17;
+    border-radius: 18px;
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  
+  /* Próximo jogo */
+  .match-card {
+    padding: 0;
+    overflow: hidden;
+    background: #071d17;
+  }
+  
+  .match-image img {
+    width: 100%;
+    display: block;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .match-content {
+    padding: 12px 12px 14px;
+  }
+  
+  .match-title {
+    color: #f7f4f0;
+    font-size: 15px;
+    margin: 0 0 4px;
+    font-weight: 700;
+  }
+  
+  .match-subtitle {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: #c0cadf;
+    line-height: 1.4;
+  }
+  
+  .primary-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: #32ff60;
+    color: #02220e;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background 0.12s ease, transform 0.08s ease;
+  
+    &:hover {
+      background: #2ae055;
+      transform: translateY(-1px);
+    }
+  
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+  
+  .match-stats {
+    gap: 12px;
+    width: 100%;
+    margin-left: 0vw;
+  }
+  
+  .stat {
+    height: 7vh;
+    background: #0b3a1a;
+    border-radius: 10px;
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: 11px;
+    color: #c5c3c3;
+    margin-bottom: 4px;
+  }
+  
+  .stat-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c5c3c3;
+  }
+  
+  /* Pagamentos pendentes */
+  .payments-card {
+    background: #0b3a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .payments-label {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+  
+  .payments-value {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  /* Ações rápidas */
+  .section-title {
+    font-size: 14px;
+    margin: 4px 0 10px;
+    font-weight: 600;
+  }
+  
+  .quick-actions {
+    margin-bottom: 8px;
+  }
+  
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  
+  .quick-card {
+    background: #f7f4f0;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    color: #111827;
+  }
+  
+  .quick-image {
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* você pode trocar as imagens por assets reais */
+  .quick-image-players {
+    // background-image: url('assets/quick-players.jpg');
+  }
+  
+  .quick-image-notes {
+    // background-image: url('assets/quick-notes.jpg');
+  }
+  
+  .quick-image-history {
+    // background-image: url('assets/quick-history.jpg');
+  }
+  
+  .quick-image-finance {
+    // background-image: url('assets/quick-finance.jpg');
+  }
+  
+  .quick-body {
+    flex: 1;
+    padding: 8px 10px;
+  }
+  
+  .quick-body h4 {
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .quick-body p {
+    margin: 0;
+    font-size: 11px;
+    color: #6b7280;
+  }
+  

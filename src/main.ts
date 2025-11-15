@@ -5,7 +5,8 @@ import { AppComponent } from './app/app.component';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from './app/environments/environment';
-
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -19,5 +20,8 @@ bootstrapApplication(AppComponent, {
       // opcional, mas recomendado:
       registrationStrategy: 'registerWhenStable:30000',
     }),
+
+    // 🚦 Rotas
+    provideRouter(routes),
   ],
 });

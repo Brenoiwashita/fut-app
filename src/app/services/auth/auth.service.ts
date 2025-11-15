@@ -6,32 +6,22 @@ import {
   signOut,
   user
 } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
+import { from, map, Observable, tap } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private auth = inject(Auth);
   user$: Observable<any> = user(this.auth);
 
-  async loginWithGoogle() {
+  loginWithGoogle$(): Observable<any> {
     const provider = new GoogleAuthProvider();
-
-    try {
-      console.log('[Auth] Iniciando login com Google...');
-      const cred = await signInWithPopup(this.auth, provider);
-      console.log('[Auth] Login OK, user:', cred.user);
-      return cred.user;
-    } catch (err: any) {
-      console.error('[Auth] ERRO no login com Google:');
-      console.error('code:', err?.code);
-      console.error('message:', err?.message);
-      console.error(err);
-      throw err;
-    }
+  
+    return from(signInWithPopup(this.auth, provider)).pipe(
+      map(cred => cred.user)
+    );
   }
 
   logout() {
-    console.log('[Auth] Logout chamado');
     return signOut(this.auth);
   }
 }

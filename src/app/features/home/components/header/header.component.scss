@@ -1,0 +1,50 @@
+.dash-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 6px 10px;
+  }
+  
+  .dash-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: #ffd0b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #3b2a1b;
+  }
+  
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .welcome-label {
+    font-size: 12px;
+    opacity: 0.85;
+  }
+  
+  .welcome-name {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .bell-btn {
+    border: none;
+    background: transparent;
+    color: #f5f7ff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  

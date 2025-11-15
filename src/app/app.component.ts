@@ -42,13 +42,7 @@ export class AppComponent {
     })
   );
 
-  login() {
-    this.auth.loginWithGoogle();
-  }
 
-  logout() {
-    this.auth.logout();
-  }
 
   instalar() {
     this.pwaInstallService.installPwa();

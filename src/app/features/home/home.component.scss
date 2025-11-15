@@ -1,0 +1,25 @@
+:host {
+    display: block;
+    height: 100vh;
+  }
+  
+  /* Layout base */
+  .dashboard-page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background: #d3d5da; // cinzinha de fundo
+  }
+  
+  .dashboard-card {
+    width: 100%;
+    background: linear-gradient(to bottom, #0f2f1f 0%, #061315 55%, #051013 100%);
+    color: #f5f7ff;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 14px 10px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.65);
+    position: relative;
+    overflow: hidden;
+  }
